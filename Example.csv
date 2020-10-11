@@ -1,0 +1,33 @@
+﻿CEN,time,Class,CRN,instructor,M,T,W,R,F,Room,Lab,Lab_Day,Lab_Time,Lab Rooom
+1,Start time,Eng Phys:Elct/Magn ,14191,Ruzybayev  ,800,,800,,800,KEC 125 ,y,R,800,KEC 125 
+,End time,Eng Phys:Elct/Magn ,,,950,,950,,950,,,,915,
+2,Start time,Eng Phys:Elct/Magn ,14192,Ruzybayev  ,800,,800,,800,KEC 125 ,y,R,930,KEC 125 
+,End time,Eng Phys:Elct/Magn ,,,950,,950,,950,,,,1045,
+3,Start time,Eng Phys:Elct/Magn ,14193,Ruzybayev  ,1000,,1000,,1000,KEC 125 ,y,R,1100,KEC 125 
+,End time,Eng Phys:Elct/Magn ,,,1150,,1150,,1150,,,,1250,
+4,Start time,Eng Phys:Elct/Magn ,14194,Ruzybayev  ,1000,,1000,,1000,KEC 125 ,y,R,1230,KEC 125 
+,End time,Eng Phys:Elct/Magn ,,,1150,,1150,,1150,,,,1345,
+5,Start time,Eng Phys:Elct/Magn ,14195,Meah  ,1400,,1400,,1400,KEC 125 ,y,R,1400,KEC 125 
+,End time,Eng Phys:Elct/Magn ,,,1550,,1550,,1550,,,,1515,
+1,Start time,D&A/Digital Circuits ,13468,Staff ,,1230,,1230,,KEC 129 ,y,T,800,KEC 124 
+,End time,D&A/Digital Circuits ,,,,1345,,1345,,,,,1045,
+2,Start time,D&A/Digital Circuits ,13469,Staff ,,1230,,1230,,KEC 129 ,y,R,800,KEC 124 
+,End time,D&A/Digital Circuits ,,,,1345,,1345,,,,,1045,
+3,Start time,D&A/Digital Circuits ,13470,Staff ,,1700,,1700,,KEC 129 ,y,F,1400,KEC 124 
+,End time,D&A/Digital Circuits ,,,,1815,,1815,,,,,1645,
+1,Start time,Diff Equations ,13825,Butler  ,1000,,1000,,,CH 232 ,n,,,
+,End time,Diff Equations ,,,1140,,1140,,,,,,,
+2,Start time,Diff Equations ,13826,Ganescu  ,1100,,1100,,1100,CH 221 ,n,,,
+,End time,Diff Equations ,,,1310,,1310,,1310,,,,,
+3,Start time,Diff Equations ,13827,Butler  ,1200,,1200,,,CH 232 ,n,,,
+,End time,Diff Equations ,,,1340,,1340,,,,,,,
+4,Start time,Diff Equations ,13828,Butler  ,,1400,,1400,,CH 231 ,n,,,
+,End time,Diff Equations ,,,,1540,,1540,,,,,,
+5,Start time,Diff Equations ,13829,Kaplan  ,1830,,1830,,,HUM 15 ,n,,,
+,End time,Diff Equations ,,,2010,,2010,,,,,,,
+1,Start time,Fund Comp Sci II ,13446,Hake  ,,,1000,,1000,KEC 123,n,,,
+,End time,Fund Comp Sci II ,,,,,1150,,1150,,,,,
+2,Start time,Fund Comp Sci II ,13446,Hake  ,,,1200,,1200,KEC 123,n,,,
+,End time,Fund Comp Sci II ,,,,,1315,,1315,,,,,
+1,Start time,Enginrg Career Trng ,13532,Wilkes  ,,1100,,,,KEC 130 ,n,,,
+,End time,Enginrg Career Trng ,,,,1150,,,,,,,,
