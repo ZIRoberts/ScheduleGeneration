@@ -39,7 +39,6 @@ def chkIteration(myList):
 
 def validate(mySchedule):
     days = ['M', 'T', 'W', 'R', 'F']
-    global sceduleCount
     for c in range(len(days)):
         #CED stands for Classes Each Day
         CED = mySchedule[[days[c]]]
@@ -82,7 +81,6 @@ def validate(mySchedule):
     return True;
 
                 
-
 #generations all possible iterations of classes 
 def generateSchedule(mylist, currentStep):
     #mylist is a list of dataframes
@@ -116,6 +114,14 @@ classSorted = []
 for c in range(classNum):
     df = classOptions.loc[classOptions['Class'] == className[c]]
     classSorted.append(df)
+
+#fixes the index numbers within the df for the sorted classes
+generation = []
+for c in range (len(classSorted)):
+    classSorted[c].index = range(classSorted[c].shape[0])
+    stepIteration.append(0)
+    df = classSorted[c].loc[[0,1],:]
+    generation.append(df)
 
 step = 0
 generateSchedule(classSorted, step)
