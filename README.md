@@ -14,8 +14,6 @@ Navigate to the generation.py file and open it. On line 8 you input the name of
 the csv (comma separated variable) file you whish to use as an input. This csv
 file must be in the same folder and match the same layout as the "exmaple.csv".
 
-note: The csv must be encoded in UTF-8
-
 To run the program you must navigate to its file directory via Terminal and
 then type 'python.exe generation.py' and the output will be printed to the
 Terminal

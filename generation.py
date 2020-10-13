@@ -14,6 +14,7 @@ sceduleCount = 1
 #remove any iterations with over laps
 def chkIteration(myList):
     global stepIteration
+    global sceduleCount
     schedule = pd.DataFrame()
     for c in range(len(stepIteration)):
         classStep = stepIteration[c]
@@ -23,7 +24,18 @@ def chkIteration(myList):
             schedule = schedule.append(myList[c].iloc[classStep * 2: (classStep * 2) + 2])
             
         schedule.index = range(schedule.shape[0])
-    validate(schedule)
+    valid = validate(schedule)
+    if valid:
+        #prints scheduel number, valid schedule, converts float64 to int64 and adds a divider for readability 
+        titles = schedule.columns
+        for p in range (0, len(titles)):
+            if  schedule[titles[p]].dtype == np.float64:
+                schedule[titles[p]] = schedule[titles[p]].astype(np.int64)
+
+        print("##############################################################################################################################################################")
+        print("Schedule #" + str(sceduleCount))
+        print(schedule)
+        sceduleCount += 1
 
 def validate(mySchedule):
     days = ['M', 'T', 'W', 'R', 'F']
@@ -64,31 +76,15 @@ def validate(mySchedule):
                             chk2 = True
                  
                         if chk1 == False and chk2 == False:
-                            valid = False
+                            return False;
 
-                    if valid == False:
-                        break
-            if valid == False:
-                break
-        if valid == False:
-            break
-        
-    if valid:
-        #prints scheduel number, valid schedule, converts float64 to int64 and adds a divider for readability 
-        titles = mySchedule.columns
-        for p in range (0, len(titles)):
-            if  mySchedule[titles[p]].dtype == np.float64:
-                mySchedule[titles[p]] = mySchedule[titles[p]].astype(np.int64)
-
-        print("##############################################################################################################################################################")
-        print("Schedule #" + str(sceduleCount))
-        print(mySchedule)
-        sceduleCount += 1
+    #returns true as defualt, false is returned if the scheudle is deemed to have over laps        
+    return True;
 
                 
 
 #generations all possible iterations of classes 
-def class_recursion(mylist, currentStep):
+def generateSchedule(mylist, currentStep):
     #mylist is a list of dataframes
     global stepIteration
 
@@ -96,7 +92,7 @@ def class_recursion(mylist, currentStep):
     stepLength = mylist[currentStep].shape[0] / 2
     for c in range(0, int(stepLength)):
         if currentStep != (len(mylist) - 1):   
-            class_recursion(mylist, currentStep + 1)
+            generateSchedule(mylist, currentStep + 1)
         else:
             chkIteration(mylist)
             
@@ -121,13 +117,5 @@ for c in range(classNum):
     df = classOptions.loc[classOptions['Class'] == className[c]]
     classSorted.append(df)
 
-#fixes the index numbers within the df for the sorted classes
-generation = []
-for c in range (len(classSorted)):
-    classSorted[c].index = range(classSorted[c].shape[0])
-    stepIteration.append(0)
-    df = classSorted[c].loc[[0,1],:]
-    generation.append(df)
-
 step = 0
-class_recursion(classSorted, step)
+generateSchedule(classSorted, step)
