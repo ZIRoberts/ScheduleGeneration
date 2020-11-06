@@ -11,18 +11,16 @@ I only had the time to make and compare a total of 4 schedules.
 How to use:
 Navigate to the generation.py file and open it. On line 8 you input the name of
 the csv (comma separated variable) file you whish to use as an input, by default
-this is "example.csv". This csv file must be in the same folder and match the same
-layout as the "exmaple.csv".
+this is "Example.csv". This csv file must be in the same folder and match the same
+layout as the "Exmaple.csv".
 
 To run the program you must navigate to its file directory via Terminal and
 then type 'python.exe generation.py' and the output will be printed to the
-Terminal
+terminal
 
 Future Plans/Stages of Progression:
-1. Refactor required layout for input csv
-2. Print output schedules as csv files
-3. Make GUI and have output displayed graphically
-4. Have it scrape the YCP schedule of classes page to get all class information
+1. Make GUI and have output displayed graphically
+2. Have it scrape the YCP schedule of classes page to get all class information
    instead of requiring an input csv file
-5. Make it so you can sort your course how ever want, what time you want to
+3. Make it so you can sort your course how ever want, what time you want to
    have a specific course, what professor you want, etc.
